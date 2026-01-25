@@ -355,22 +355,6 @@
             background: #5568d3;
         }
 
-        /* Message de confirmation */
-        .success-message {
-            display: none;
-            background: #4CAF50;
-            color: white;
-            padding: 20px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            text-align: center;
-            font-size: 1.1em;
-        }
-
-        .success-message.show {
-            display: block;
-        }
-
         /* Footer */
         footer {
             background: #2c3e50;
@@ -525,7 +509,7 @@
         <div class="container">
             <h2>Qui suis-je ?</h2>
             <div class="about-content">
-                <p>Je m'appelle Eude, étudiant en Master Ingénierie Statistique et Informatique de la Finance de l'assurance et du risque à l'Université Paris Cité. Passionné par les mathématiques et la pédagogie, je crée du contenu éducatif animé sous le compte TikTok GeromEtrie.</p>
+                <p>Je m'appelle Eude, étudiant en Master Statistique et Informatique Décisionnelle à l'Université Paris Cité. Passionné par les mathématiques et la pédagogie, je crée du contenu éducatif animé sous le compte TikTok GeromEtrie.</p>
                 <p style="margin-top: 20px;">Maîtrisant parfaitement LaTeX pour mes projets académiques et de vulgarisation, je souhaite aider les enseignants à produire des supports de cours de qualité professionnelle sans perdre de temps sur les aspects techniques.</p>
                 <p style="margin-top: 20px;">Je comprends les besoins pédagogiques et la rigueur nécessaire pour des documents mathématiques clairs et élégants.</p>
             </div>
@@ -570,13 +554,11 @@
             <h2>Recevez votre devis gratuit</h2>
             <p>Décrivez-moi votre projet et je vous réponds sous 24h</p>
             
-            <!-- Message de confirmation (caché par défaut) -->
-            <div id="successMessage" class="success-message">
-                ✓ Merci ! Votre demande a bien été envoyée.<br>
-                Vous recevrez une réponse personnalisée sous 24h à l'adresse email indiquée.
-            </div>
-
-            <form id="contactForm" action="https://formspree.io/f/xanypozn" method="POST">
+            <form action="https://formspree.io/f/xanypozn" method="POST">
+                <!-- Champ caché pour la page de redirection après soumission -->
+                <input type="hidden" name="_next" value="https://latex-academique.netlify.app/#merci">
+                <input type="hidden" name="_subject" value="Nouvelle demande LaTeX Académique">
+                
                 <div class="form-group">
                     <label for="name">Nom complet *</label>
                     <input type="text" id="name" name="name" required>
@@ -584,12 +566,12 @@
 
                 <div class="form-group">
                     <label for="email">Email *</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="_replyto" required>
                 </div>
 
                 <div class="form-group">
                     <label for="level">Niveau d'enseignement *</label>
-                    <select id="level" name="level" required>
+                    <select id="level" name="niveau" required>
                         <option value="">-- Sélectionnez --</option>
                         <option value="college">Collège</option>
                         <option value="lycee">Lycée</option>
@@ -601,7 +583,7 @@
 
                 <div class="form-group">
                     <label for="subject">Matière *</label>
-                    <input type="text" id="subject" name="subject" placeholder="Ex: Mathématiques, Physique..." required>
+                    <input type="text" id="subject" name="matiere" placeholder="Ex: Mathématiques, Physique..." required>
                 </div>
 
                 <div class="form-group">
@@ -622,42 +604,6 @@
 
                 <button type="submit" class="submit-button">Envoyer ma demande</button>
             </form>
-
-            <script>
-                // Gérer la soumission du formulaire
-                const form = document.getElementById('contactForm');
-                const successMessage = document.getElementById('successMessage');
-
-                form.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    // Envoyer les données à Formspree
-                    fetch(form.action, {
-                        method: 'POST',
-                        body: new FormData(form),
-                        headers: {
-                            'Accept': 'application/json'
-                        }
-                    }).then(response => {
-                        if (response.ok) {
-                            // Afficher le message de succès
-                            successMessage.classList.add('show');
-                            // Réinitialiser le formulaire
-                            form.reset();
-                            // Faire défiler vers le message
-                            successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                            // Masquer le message après 10 secondes
-                            setTimeout(() => {
-                                successMessage.classList.remove('show');
-                            }, 10000);
-                        } else {
-                            alert('Une erreur est survenue. Veuillez réessayer ou nous contacter directement à latex.academique@gmail.com');
-                        }
-                    }).catch(error => {
-                        alert('Une erreur est survenue. Veuillez réessayer ou nous contacter directement à latex.academique@gmail.com');
-                    });
-                });
-            </script>
         </div>
     </section>
 
