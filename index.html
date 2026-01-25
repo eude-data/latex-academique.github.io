@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaTeX Académique - Vos cours mis à jour professionnellement</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: transform 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Problem Section */
+        .problem {
+            background: #f8f9fa;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .problem h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+        .problem-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .problem-item {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Solution Section */
+        .solution {
+            padding: 60px 20px;
+        }
+
+        .solution h2 {
+            font-size: 2em;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .benefit {
+            padding: 30px;
+            border-left: 4px solid #667eea;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        .benefit h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        /* Process Section */
+        .process {
+            background: #f8f9fa;
+            padding: 60px 20px;
+        }
+
+        .process h2 {
+            font-size: 2em;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .step {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: #667eea;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+
+        .step h3 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        /* Examples Section */
+        .examples {
+            padding: 60px 20px;
+        }
+
+        .examples h2 {
+            font-size: 2em;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .example-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .example-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .example-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .example-image {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3em;
+        }
+
+        .example-content {
+            padding: 20px;
+        }
+
+        .example-content h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            background: #f8f9fa;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .pricing h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .pricing-info {
+            max-width: 600px;
+            margin: 30px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* About Section */
+        .about {
+            padding: 60px 20px;
+        }
+
+        .about h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .about-content {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background: #f8f9fa;
+            padding: 60px 20px;
+        }
+
+        .faq h2 {
+            font-size: 2em;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .faq-item {
+            max-width: 800px;
+            margin: 0 auto 25px;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .faq-item h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        /* Contact Form Section */
+        .contact {
+            padding: 60px 20px;
+        }
+
+        .contact h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .contact p {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-button {
+            background: #667eea;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .submit-button:hover {
+            background: #5568d3;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8em;
+            }
+
+            .hero p {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Vos cours LaTeX mis à jour pendant que vous vous concentrez sur vos élèves</h1>
+            <p>Documents pédagogiques professionnels en LaTeX, sans le casse-tête technique</p>
+            <a href="#contact" class="cta-button">Demander un devis gratuit</a>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem">
+        <div class="container">
+            <h2>Vous reconnaissez ces situations ?</h2>
+            <div class="problem-list">
+                <div class="problem-item">
+                    <p>📝 Mettre à jour vos polycopiés vous prend des heures</p>
+                </div>
+                <div class="problem-item">
+                    <p>🔢 Les formules mathématiques sont pénibles à formater dans Word</p>
+                </div>
+                <div class="problem-item">
+                    <p>😤 Votre contenu est excellent, mais la mise en forme vous frustre</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution">
+        <div class="container">
+            <h2>La solution : LaTeX Académique</h2>
+            <div class="benefits">
+                <div class="benefit">
+                    <h3>✓ Mise à jour de vos cours</h3>
+                    <p>J'intègre vos nouvelles parties, corrige les coquilles, modernise la mise en page selon vos instructions</p>
+                </div>
+                <div class="benefit">
+                    <h3>✓ Conversion professionnelle</h3>
+                    <p>Vos documents Word/PDF deviennent des fichiers LaTeX modifiables et réutilisables</p>
+                </div>
+                <div class="benefit">
+                    <h3>✓ Création sur mesure</h3>
+                    <p>Nouveaux chapitres, feuilles d'exercices, supports de TD conformes à vos besoins pédagogiques</p>
+                </div>
+                <div class="benefit">
+                    <h3>✓ Fichiers sources fournis</h3>
+                    <p>Vous gardez le contrôle total pour des modifications futures, avec documentation claire</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <h2>Comment ça marche ?</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Vous m'envoyez</h3>
+                    <p>Vos documents et vos besoins via le formulaire ci-dessous</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Je vous envoie</h3>
+                    <p>Un devis gratuit et personnalisé sous 24h maximum</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Je réalise</h3>
+                    <p>Votre commande avec des points de validation réguliers</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Vous recevez</h3>
+                    <p>Les fichiers LaTeX + PDF finaux, prêts à l'emploi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Examples Section -->
+    <section class="examples">
+        <div class="container">
+            <h2>Exemples de réalisations</h2>
+            <div class="example-grid">
+                <div class="example-card">
+                    <div class="example-image">∫</div>
+                    <div class="example-content">
+                        <h3>Cours de dérivées - Terminale</h3>
+                        <p>Mise à jour complète d'un polycopié de 25 pages avec formules mathématiques, graphiques et exercices corrigés.</p>
+                    </div>
+                </div>
+                <div class="example-card">
+                    <div class="example-image">Σ</div>
+                    <div class="example-content">
+                        <h3>Feuilles d'exercices - Licence</h3>
+                        <p>Création de séries d'exercices de probabilités avec mise en page professionnelle et numérotation automatique.</p>
+                    </div>
+                </div>
+                <div class="example-card">
+                    <div class="example-image">∞</div>
+                    <div class="example-content">
+                        <h3>Polycopié de statistiques - Master</h3>
+                        <p>Document de 80+ pages avec tableaux de données, formules complexes et bibliographie académique.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <div class="container">
+            <h2>Tarifs</h2>
+            <div class="pricing-info">
+                <p style="font-size: 1.1em; margin-bottom: 20px;">Chaque projet est unique. Je vous propose un tarif personnalisé selon :</p>
+                <ul style="text-align: left; margin: 20px 0; line-height: 2;">
+                    <li>✓ La longueur du document</li>
+                    <li>✓ La complexité des formules et graphiques</li>
+                    <li>✓ Les délais souhaités</li>
+                    <li>✓ Le type de service (mise à jour, conversion, création)</li>
+                </ul>
+                <p style="font-weight: 600; color: #667eea; font-size: 1.2em;">Devis gratuit sous 24h !</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2>Qui suis-je ?</h2>
+            <div class="about-content">
+                <p>Je m'appelle Eude, étudiant en Master Statistique et Informatique Décisionnelle à l'Université Paris Cité. Passionné par les mathématiques et la pédagogie, je crée du contenu éducatif animé sous le compte TikTok GeromEtrie.</p>
+                <p style="margin-top: 20px;">Maîtrisant parfaitement LaTeX pour mes projets académiques et de vulgarisation, je souhaite aider les enseignants à produire des supports de cours de qualité professionnelle sans perdre de temps sur les aspects techniques.</p>
+                <p style="margin-top: 20px;">Je comprends les besoins pédagogiques et la rigueur nécessaire pour des documents mathématiques clairs et élégants.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2>Questions fréquentes</h2>
+            
+            <div class="faq-item">
+                <h3>Quels formats acceptez-vous en entrée ?</h3>
+                <p>J'accepte tous types de fichiers : Word (.doc, .docx), PDF, documents scannés, ou même vos notes manuscrites. Je peux travailler à partir de n'importe quel support.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Combien de temps prend une mise à jour ?</h3>
+                <p>Cela dépend de la longueur et de la complexité. En général, comptez 3-7 jours pour un document standard. Les projets urgents peuvent être traités plus rapidement (avec supplément).</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Puis-je modifier les fichiers LaTeX moi-même après ?</h3>
+                <p>Absolument ! Je vous fournis les fichiers sources (.tex) avec une documentation claire. Vous pourrez faire des modifications simples vous-même, et me recontacter si besoin.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Mes documents restent-ils confidentiels ?</h3>
+                <p>Oui, totalement. Vos documents ne seront jamais partagés ni utilisés à d'autres fins. Je peux signer un accord de confidentialité si nécessaire.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Proposez-vous des corrections après livraison ?</h3>
+                <p>Oui ! Les corrections mineures (coquilles, ajustements) sont incluses dans le tarif initial pendant 14 jours après livraison.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Recevez votre devis gratuit</h2>
+            <p>Décrivez-moi votre projet et je vous réponds sous 24h</p>
+            
+            <form action="https://formspree.io/f/xanypozn" method="POST">
+                <div class="form-group">
+                    <label for="name">Nom complet *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="level">Niveau d'enseignement *</label>
+                    <select id="level" name="level" required>
+                        <option value="">-- Sélectionnez --</option>
+                        <option value="college">Collège</option>
+                        <option value="lycee">Lycée</option>
+                        <option value="licence">Licence</option>
+                        <option value="master">Master</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Matière *</label>
+                    <input type="text" id="subject" name="subject" placeholder="Ex: Mathématiques, Physique..." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Type de service souhaité *</label>
+                    <select id="service" name="service" required>
+                        <option value="">-- Sélectionnez --</option>
+                        <option value="mise-a-jour">Mise à jour d'un cours existant</option>
+                        <option value="conversion">Conversion Word/PDF vers LaTeX</option>
+                        <option value="creation">Création de nouveau contenu</option>
+                        <option value="autre">Autre (à préciser)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description de votre besoin *</label>
+                    <textarea id="description" name="description" placeholder="Décrivez votre projet : nombre de pages, type de contenu, délai souhaité, etc." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">Envoyer ma demande</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 LaTeX Académique - Tous droits réservés</p>
+            <p style="margin-top: 10px;">Contact : <a href="mailto:latex.academique@gmail.com" style="color: white;">latex.academique@gmail.com</a></p>
+        </div>
+    </footer>
+</body>
+</html>
