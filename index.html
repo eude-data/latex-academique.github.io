@@ -175,44 +175,6 @@
             color: #2c3e50;
         }
 
-        .example-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
-        }
-
-        .example-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-
-        .example-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .example-image {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 3em;
-        }
-
-        .example-content {
-            padding: 20px;
-        }
-
-        .example-content h3 {
-            color: #667eea;
-            margin-bottom: 10px;
-        }
-
         /* Pricing Section */
         .pricing {
             background: #f8f9fa;
@@ -379,8 +341,8 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Vos cours LaTeX mis à jour pendant que vous vous concentrez sur vos élèves</h1>
-            <p>Documents pédagogiques professionnels en LaTeX, sans le casse-tête technique</p>
+            <h1>Concentrez-vous sur vos élèves. On s'occupe de la mise en forme.</h1>
+            <p>Évaluations, examens, corrigés et cours — des documents scientifiques professionnels, clés-en-main</p>
             <a href="#contact" class="cta-button">Demander un devis gratuit</a>
         </div>
     </section>
@@ -391,13 +353,16 @@
             <h2>Vous reconnaissez ces situations ?</h2>
             <div class="problem-list">
                 <div class="problem-item">
-                    <p>📝 Mettre à jour vos polycopiés vous prend des heures</p>
+                    <p>⏰ Préparer une évaluation vous prend le double du temps prévu</p>
                 </div>
                 <div class="problem-item">
-                    <p>🔢 Les formules mathématiques sont pénibles à formater dans Word</p>
+                    <p>📝 Vous avez toutes les idées d'exercices, mais la mise en forme vous ralentit</p>
                 </div>
                 <div class="problem-item">
-                    <p>😤 Votre contenu est excellent, mais la mise en forme vous frustre</p>
+                    <p>😤 Écrire un corrigé digne d'être distribué aux élèves vous épuise</p>
+                </div>
+                <div class="problem-item">
+                    <p>🔄 Vous perdez du temps à reformatter les mêmes documents chaque année</p>
                 </div>
             </div>
         </div>
@@ -406,23 +371,23 @@
     <!-- Solution Section -->
     <section class="solution">
         <div class="container">
-            <h2>La solution : LaTeX Académique</h2>
+            <h2>La solution : Académique Docs</h2>
             <div class="benefits">
                 <div class="benefit">
-                    <h3>✓ Mise à jour de vos cours</h3>
-                    <p>J'intègre vos nouvelles parties, corrige les coquilles, modernise la mise en page selon vos instructions</p>
+                    <h3>📋 Évaluations & Examens</h3>
+                    <p>Vous fournissez les questions et les barèmes, je produis des documents prêts à distribuer avec une mise en forme impeccable</p>
                 </div>
                 <div class="benefit">
-                    <h3>✓ Conversion professionnelle</h3>
-                    <p>Vos documents Word/PDF deviennent des fichiers LaTeX modifiables et réutilisables</p>
+                    <h3>✅ Corrigés professionnels</h3>
+                    <p>Vos corrections deviennent des documents clairs et structurés : formules élégantes, raisonnements bien titrés, résultats mis en valeur</p>
                 </div>
                 <div class="benefit">
-                    <h3>✓ Création sur mesure</h3>
-                    <p>Nouveaux chapitres, feuilles d'exercices, supports de TD conformes à vos besoins pédagogiques</p>
+                    <h3>📚 Cours & Polycopiés</h3>
+                    <p>Mise à jour ou création de supports de cours avec une typographie scientifique irréprochable</p>
                 </div>
                 <div class="benefit">
-                    <h3>✓ Fichiers sources fournis</h3>
-                    <p>Vous gardez le contrôle total pour des modifications futures, avec documentation claire</p>
+                    <h3>♻️ Fichiers réutilisables</h3>
+                    <p>Vous gardez le contrôle total de vos documents pour les modifier ou les réutiliser en toute facilité</p>
                 </div>
             </div>
         </div>
@@ -451,7 +416,7 @@
                 <div class="step">
                     <div class="step-number">4</div>
                     <h3>Vous recevez</h3>
-                    <p>Les fichiers LaTeX + PDF finaux, prêts à l'emploi</p>
+                    <p>Vos documents finaux professionnels, prêts à imprimer ou distribuer</p>
                 </div>
             </div>
         </div>
@@ -461,28 +426,50 @@
     <section class="examples">
         <div class="container">
             <h2>Exemples de réalisations</h2>
-            <div class="example-grid">
-                <div class="example-card">
-                    <div class="example-image">∫</div>
-                    <div class="example-content">
-                        <h3>Cours de dérivées - Terminale</h3>
-                        <p>Mise à jour complète d'un polycopié de 25 pages avec formules mathématiques, graphiques et exercices corrigés.</p>
+            <p style="text-align:center; color:#666; margin-bottom:30px; font-size:1.05em;">Chaque exemple montre une conversion réelle : <strong>manuscrit à la main → document professionnel clé-en-main</strong></p>
+
+            <!-- Exemple 1 -->
+            <div style="display:flex; flex-direction:row; border-radius:12px; overflow:hidden; box-shadow:0 4px 20px rgba(0,0,0,0.1); margin-bottom:30px; background:white;">
+                <div style="flex:1; padding:30px; border-right:1px solid #eee;">
+                    <div style="display:inline-block; background:#e74c3c; color:white; padding:4px 12px; border-radius:20px; font-size:0.8em; font-weight:600; margin-bottom:12px;">AVANT</div>
+                    <h3 style="color:#333; margin-bottom:10px;">📝 Manuscrit à la main</h3>
+                    <p style="color:#666; font-size:0.92em; line-height:1.6;">Corrigé rédigé à la main sur cahier : nombres complexes, racines de z⁶ − 1, calculs de matrices 2×2, diagonalisation et démonstration par récurrence de Aⁿ. Deux pages denses et très touffues.</p>
+                    <div style="margin-top:15px; background:#fdf2f2; border-left:3px solid #e74c3c; padding:10px 14px; border-radius:0 8px 8px 0;">
+                        <p style="color:#c0392b; font-size:0.85em; margin:0;"><strong>Problèmes :</strong> Écriture serrée, matrices mal alignées, récurrence difficile à suivre, impossible à distribuer telle quelle.</p>
                     </div>
                 </div>
-                <div class="example-card">
-                    <div class="example-image">Σ</div>
-                    <div class="example-content">
-                        <h3>Feuilles d'exercices - Licence</h3>
-                        <p>Création de séries d'exercices de probabilités avec mise en page professionnelle et numérotation automatique.</p>
+                <div style="flex:1; padding:30px; background:#f0f7ff;">
+                    <div style="display:inline-block; background:#27ae60; color:white; padding:4px 12px; border-radius:20px; font-size:0.8em; font-weight:600; margin-bottom:12px;">APRÈS</div>
+                    <h3 style="color:#333; margin-bottom:10px;">✨ Corrigé DST — Terminale Maths Expertes</h3>
+                    <p style="color:#666; font-size:0.92em; line-height:1.6;">Document propre de 3 pages : en-tête du lycée, exercices séparés, formules typées avec precision (racines complexes, matrices diagonalisées, Aⁿ = PDⁿP⁻¹ élégant). Récurrence structurée en 3 blocs : initialisation, hérédité, conclusion.</p>
+                    <div style="margin-top:15px; background:#eafaf1; border-left:3px solid #27ae60; padding:10px 14px; border-radius:0 8px 8px 0;">
+                        <p style="color:#1e8449; font-size:0.85em; margin:0;"><strong>Résultat :</strong> Lisible, structuré, prêt à distribuer directement aux élèves. Zéro retouche nécessaire.</p>
                     </div>
                 </div>
-                <div class="example-card">
-                    <div class="example-image">∞</div>
-                    <div class="example-content">
-                        <h3>Polycopié de statistiques - Master</h3>
-                        <p>Document de 80+ pages avec tableaux de données, formules complexes et bibliographie académique.</p>
+            </div>
+
+            <!-- Exemple 2 -->
+            <div style="display:flex; flex-direction:row; border-radius:12px; overflow:hidden; box-shadow:0 4px 20px rgba(0,0,0,0.1); margin-bottom:30px; background:white;">
+                <div style="flex:1; padding:30px; border-right:1px solid #eee;">
+                    <div style="display:inline-block; background:#e74c3c; color:white; padding:4px 12px; border-radius:20px; font-size:0.8em; font-weight:600; margin-bottom:12px;">AVANT</div>
+                    <h3 style="color:#333; margin-bottom:10px;">📝 Manuscrit à la main</h3>
+                    <p style="color:#666; font-size:0.92em; line-height:1.6;">Corrigé du DST Seconde écrit à la main : 4 équations résolues côte à côte, tableau de signes dessiné, intervalles sur la droite numérique tracée à la main, problème en contexte (budget de Leïla).</p>
+                    <div style="margin-top:15px; background:#fdf2f2; border-left:3px solid #e74c3c; padding:10px 14px; border-radius:0 8px 8px 0;">
+                        <p style="color:#c0392b; font-size:0.85em; margin:0;"><strong>Problèmes :</strong> Mise en page très irrégulière, tableau de signes à la main, intervalles flous, droite numérique approximative.</p>
                     </div>
                 </div>
+                <div style="flex:1; padding:30px; background:#f0f7ff;">
+                    <div style="display:inline-block; background:#27ae60; color:white; padding:4px 12px; border-radius:20px; font-size:0.8em; font-weight:600; margin-bottom:12px;">APRÈS</div>
+                    <h3 style="color:#333; margin-bottom:10px;">✨ Corrigé DST — Seconde</h3>
+                    <p style="color:#666; font-size:0.92em; line-height:1.6;">Document professionnel de 3 pages : 4 exercices bien séparés, résolutions pas à pas avec ⇐⇒ parfaits, tableau de signes aligné et clair, intervalles I ∩ J bien formattés, et problème en contexte résolu proprement.</p>
+                    <div style="margin-top:15px; background:#eafaf1; border-left:3px solid #27ae60; padding:10px 14px; border-radius:0 8px 8px 0;">
+                        <p style="color:#1e8449; font-size:0.85em; margin:0;"><strong>Résultat :</strong> Chaque exercice lisible d'un coup d'œil. Ensembles des solutions mis en valeur. Distribuer en 1 clic.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align:center; margin-top:15px;">
+                <p style="color:#667eea; font-weight:600; font-size:1.05em;">📧 Contactez-moi pour voir les PDFs complets de ces réalisations !</p>
             </div>
         </div>
     </section>
@@ -509,9 +496,9 @@
         <div class="container">
             <h2>Qui suis-je ?</h2>
             <div class="about-content">
-                <p>Je m'appelle Eude, étudiant en Master Statistique et Informatique Décisionnelle à l'Université Paris Cité. Passionné par les mathématiques et la pédagogie, je crée du contenu éducatif animé sous le compte TikTok GeromEtrie.</p>
-                <p style="margin-top: 20px;">Maîtrisant parfaitement LaTeX pour mes projets académiques et de vulgarisation, je souhaite aider les enseignants à produire des supports de cours de qualité professionnelle sans perdre de temps sur les aspects techniques.</p>
-                <p style="margin-top: 20px;">Je comprends les besoins pédagogiques et la rigueur nécessaire pour des documents mathématiques clairs et élégants.</p>
+                <p>Je m'appelle Eude, étudiant en Master Statistique et Informatique à l'Université Paris Cité. Passionné par les mathématiques et la pédagogie, je crée également du contenu éducatif animé sous le compte TikTok <strong>GeromEtrie</strong>.</p>
+                <p style="margin-top: 20px;">Enseignant de mathématiques au lycée, je connais exactement ce que vous vivez au quotidien : la charge de préparer des évaluations, d'écrire des corrigés, de produire des documents propres en très peu de temps. Je maîtrise la typographie scientifique pour produire ces documents à votre place, afin que vous puissiez vous concentrer sur ce qui compte vraiment — l'idée pédagogique et le fond.</p>
+                <p style="margin-top: 20px;">Chaque document que je livre est relu, vérifié et prêt à être distribué directement à vos élèves.</p>
             </div>
         </div>
     </section>
@@ -522,18 +509,18 @@
             <h2>Questions fréquentes</h2>
             
             <div class="faq-item">
-                <h3>Quels formats acceptez-vous en entrée ?</h3>
-                <p>J'accepte tous types de fichiers : Word (.doc, .docx), PDF, documents scannés, ou même vos notes manuscrites. Je peux travailler à partir de n'importe quel support.</p>
+                <h3>Quels types de documents acceptez-vous ?</h3>
+                <p>Tout type de support : notes manuscrites, Word, PDF, scans, photos... À partir de n'importe quel document, je produis un résultat professionnel. Pas besoin que votre document soit propre pour démarrer.</p>
             </div>
 
             <div class="faq-item">
-                <h3>Combien de temps prend une mise à jour ?</h3>
-                <p>Cela dépend de la longueur et de la complexité. En général, comptez 3-7 jours pour un document standard. Les projets urgents peuvent être traités plus rapidement (avec supplément).</p>
+                <h3>Combien de temps ça prend ?</h3>
+                <p>Pour un corrigé ou une évaluation standard, comptez 2-4 jours. Pour un cours complet, plutôt 5-7 jours. Les projets urgents peuvent être traités plus rapidement selon disponibilité.</p>
             </div>
 
             <div class="faq-item">
-                <h3>Puis-je modifier les fichiers LaTeX moi-même après ?</h3>
-                <p>Absolument ! Je vous fournis les fichiers sources (.tex) avec une documentation claire. Vous pourrez faire des modifications simples vous-même, et me recontacter si besoin.</p>
+                <h3>Pourrai-je modifier mes documents après livraison ?</h3>
+                <p>Absolument ! Je vous livre les fichiers sources avec une documentation claire pour que vous puissiez faire des ajustements vous-même si vous le souhaitez. Je reste disponible pour toute modification future.</p>
             </div>
 
             <div class="faq-item">
@@ -542,8 +529,8 @@
             </div>
 
             <div class="faq-item">
-                <h3>Proposez-vous des corrections après livraison ?</h3>
-                <p>Oui ! Les corrections mineures (coquilles, ajustements) sont incluses dans le tarif initial pendant 14 jours après livraison.</p>
+                <h3>Et si le résultat ne me convient pas ?</h3>
+                <p>Les corrections mineures sont incluses gratuitement pendant 14 jours après livraison. Je travaille en étroite collaboration avec vous pour m'assurer que le résultat correspond exactement à vos attentes.</p>
             </div>
         </div>
     </section>
@@ -551,8 +538,8 @@
     <!-- Contact Form Section -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2>Recevez votre devis gratuit</h2>
-            <p>Décrivez-moi votre projet et je vous réponds sous 24h</p>
+            <h2>Demandez votre devis gratuit</h2>
+            <p>Décrivez-moi votre besoin et je vous réponds sous 24h</p>
             
             <form name="contact" method="POST" data-netlify="true" action="/merci.html">
                 <input type="hidden" name="form-name" value="contact">
@@ -585,12 +572,13 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="service">Type de service souhaité *</label>
+                    <label for="service">Type de besoin *</label>
                     <select id="service" name="service" required>
                         <option value="">-- Sélectionnez --</option>
-                        <option value="mise-a-jour">Mise à jour d'un cours existant</option>
-                        <option value="conversion">Conversion Word/PDF vers LaTeX</option>
-                        <option value="creation">Création de nouveau contenu</option>
+                        <option value="evaluation">Évaluation / Examen</option>
+                        <option value="corrige">Corrigé</option>
+                        <option value="cours">Cours / Polycopié</option>
+                        <option value="mise-a-jour">Mise à jour d'un document existant</option>
                         <option value="autre">Autre (à préciser)</option>
                     </select>
                 </div>
